@@ -11,7 +11,8 @@ import java.io.InputStreamReader;
 public class FileWork {
 
 	private static final String ARQUIVO_NÃO_FOI_ENCONTRADO = "Arquivo não foi encontrado";
-	File file;
+	
+	private File file;
 
 	public FileWork(String nameFile) {
 		file = new File(nameFile);
