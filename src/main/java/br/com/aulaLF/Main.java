@@ -10,8 +10,8 @@ public class Main {
 
 		String rowFile = fileWork.readFile();
 		System.out.println(rowFile);
-		
+
 		fileWork.writeFile("bli");
-		
+
 	}
 }
