@@ -1,5 +1,9 @@
 package br.com.aulaLF;
 
-public enum RomanNumeral {
-	I, V, X, L, C, D, M;
+public class RomanNumeral implements Numeral {
+
+    public RomanNumeral convert(int arabicNumber) {
+        return null;
+    }
+
 }
