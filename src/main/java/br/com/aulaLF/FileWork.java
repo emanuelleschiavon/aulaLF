@@ -10,35 +10,34 @@ import java.io.InputStreamReader;
 
 public class FileWork {
 
-	private static final String ARQUIVO_NÃO_FOI_ENCONTRADO = "Arquivo não foi encontrado";
-	
+	private static final String ERROR_FILE_NOT_FOUND = "Arquivo não foi encontrado";
+
 	private File file;
 
 	public FileWork(String nameFile) {
 		file = new File(nameFile);
 	}
 
-	public String readFile() {
+	public String readFirstRow() {
 		String rowFile = null;
 		try {
-			FileInputStream fis = new FileInputStream(file);
-			InputStreamReader isr = new InputStreamReader(fis);
+			InputStreamReader isr = new InputStreamReader(new FileInputStream(file));
 			BufferedReader br = new BufferedReader(isr);
 			rowFile = br.readLine();
 			br.close();
 		} catch (IOException e) {
-			System.out.println(ARQUIVO_NÃO_FOI_ENCONTRADO);
+			System.out.println(ERROR_FILE_NOT_FOUND);
 		}
 		return rowFile;
 	}
 
-	public void writeFile(String rowFile) {
+	public void writeStringInFile(String string) {
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter(file));
-			bw.write(rowFile);
+			bw.write(string);
 			bw.close();
 		} catch (IOException e) {
-			System.out.println(ARQUIVO_NÃO_FOI_ENCONTRADO);
+			System.out.println(ERROR_FILE_NOT_FOUND);
 		}
 	}
 }
