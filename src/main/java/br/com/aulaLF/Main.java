@@ -5,13 +5,14 @@ import java.io.IOException;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		String nameFile = "teste.txt";
-		FileWork fileWork = new FileWork(nameFile);
+		String nameFileToRead = "leitura.txt";
+		FileWork fileWork = new FileWork(nameFileToRead);
 
-		String rowFile = fileWork.readFile();
-		System.out.println(rowFile);
+		String firstRowOfFileRead = fileWork.readFirstRow();
+		System.out.println(firstRowOfFileRead);
 
-		fileWork.writeFile("bli");
-
+		String nameFileToWrite = "escrita.txt";
+		fileWork = new FileWork(nameFileToWrite);
+		fileWork.writeStringInFile(firstRowOfFileRead);
 	}
 }
