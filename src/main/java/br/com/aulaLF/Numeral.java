@@ -28,7 +28,7 @@ public class Numeral {
 			arabicNumeral = 50;
 			break;
 		case C:
-			arabicNumeral = 10;
+			arabicNumeral = 100;
 			break;
 		case D:
 			arabicNumeral = 500;
